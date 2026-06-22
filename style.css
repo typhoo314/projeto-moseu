@@ -1,103 +1,161 @@
-body{
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
-    color: white;
-    text-align: center;
-}
-
 nav{
-    background: #111;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-nav a{
-    color: orange;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 18px;
-    border: 1px solid orange;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-nav a:hover{
-    background: orange;
-    color: black;
-}
-
-h1{
-    color: orange;
-    font-size: 50px;
-    margin-top: 60px;
-}
-
-p{
-    width: 70%;
-    margin: 20px auto;
-    font-size: 18px;
-    line-height: 1.6;
-    opacity: 0.9;
-}
-
-hr{
-    width: 60%;
-    border: none;
-    height: 2px;
-    background: orange;
-    margin: 30px auto;
-}
-
-button{
-    background: transparent;
-    border: 2px solid orange;
-    color: orange;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover{
-    background: orange;
-    color: black;
-}
-
-.veiculos{
+    background: rgba(0,0,0,0.85);
+    padding: 18px;
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 40px;
+}
+
+nav a{
+    background-color: #111;
+    color: #ffd000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: 2px solid #ffd000;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    background: #ffd000;
+    color: #111;
+    transform: translateY(-4px);
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* BOTÃO BASE */
+button{
+    background: #111;
+    color: #ffd000;
+    border: 2px solid #ffd000;
+    padding: 15px 45px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 25px auto;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+/* ================= HOME ================= */
+body.home{
+    background: linear-gradient(135deg,#1f1f1f,#3d3d3d,#ff8800,#ffd000);
+    color: white;
+}
+
+body.home h1{
+    font-size: 60px;
+    margin-top: 80px;
+    color: #ffd000;
+}
+
+body.home p{
+    width: 70%;
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* ================= TERRESTRE ================= */
+body.terrestre{
+    background: linear-gradient(135deg,#1a1a1a,#2f2f2f,#ff8800,#ffd000);
+    color: white;
+}
+
+button:focus,
+button:focus-visible{
+    outline: none;
+    box-shadow: none;
+}
+
+body.terrestre h1{
+    font-size: 60px;
+    margin-top: 80px;
+    color: #ffb300;
+}
+
+body.terrestre button{
+    background: #2b1d00;
+    color: #ffcc66;
+    border-color: #ff8800;
+}
+
+body.terrestre button:hover{
+    background: #ff8800;
+    color: #111;
+}
+
+/* ================= AÉREO ================= */
+body.aereo{
+    background: linear-gradient(135deg,#001a2b,#00334d,#4dd0e1,#e0f7ff);
+    color: #eaf6ff;
+}
+
+body.aereo h1{
+    font-size: 60px;
+    margin-top: 80px;
+    color: #4dd0e1;
+}
+
+body.aereo p{
+    width: 70%;
+    margin: 20px auto;
+    font-size: 20px;
+    color: #d6f3ff;
+}
+
+body.aereo button{
+    background: #001a2b;
+    color: #bfefff;
+    border-color: #4dd0e1;
+}
+
+body.aereo button:hover{
+    background: #4dd0e1;
+    color: #001a2b;
+}
+
+/* ================= VEÍCULOS ================= */
+.veiculos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 40px auto;
 }
 
 .card{
     width: 280px;
-    background: #1a1a1a;
-    border: 1px solid rgba(255,165,0,0.4);
-    border-radius: 12px;
-    overflow: hidden;
+    padding: 18px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     transition: 0.3s;
 }
 
 .card:hover{
     transform: translateY(-8px);
-    border-color: orange;
 }
 
 .card img{
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    border-radius: 10px;
 }
 
 .card p{
-    font-size: 16px;
-    padding: 10px;
-    width: auto;
+    font-size: 18px;
+    margin-top: 10px;
 }
